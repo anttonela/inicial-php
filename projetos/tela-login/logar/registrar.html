@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./registrar.css">
+    <title>Registrar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="linha">
+
+            <div class="coluna-esquerda">
+                <div class="texto">Complete o login e acesse ao site para mais informações.</div>
+                <img class="computador" src="../img/computador-icone.png">
+            </div>
+
+            <div class="coluna-direita">
+                <div class="textarea">
+                    <div class="logar">Registrar</div>
+                    <form name="new-user" method="post" action="registrar.phtml">
+                        <div class="subtitulo">Usuário:</div>
+                        <input name="usuario" class="usuario" placeholder="user1234"></input>
+                        <div class="informacao">Usuário não deve conter espaços ou caracteres invisíveis.</div>
+                        <div class="subtitulo">Senha:</div>
+                        <input name="senha" class="senha" placeholder="senha@123"></input>
+                        <div class="informacao">Senha deve conter mais que seis caracteres.</div>
+                        <button type="submit" class="botao" name="botao" id="botao">Concluído</button>
+                    </form>
+                    <a href="../entrar/entrar.html">
+                        <div class="entrar">Já possue uma conta? Entrar</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

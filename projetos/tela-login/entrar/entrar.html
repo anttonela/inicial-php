@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./entrar.css">
+    <title>Entrar</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="linha">
+
+            <div class="coluna-esquerda">
+                <div class="texto">Complete o login e acesse ao site para mais informações.</div>
+                <img class="computador" src="../img/computador-icone.png">
+            </div>
+            
+            <div class="coluna-direita">
+                <div class="textarea">
+                    <div class="entrar">Entrar</div>
+                    <form name="encontrar-user" method="post" action="./verificar-user.phtml"> 
+                        <div class="subtitulo">Usuário:</div>
+                        <input name="usuario" placeholder="user1234" class="usuario"></input>
+                        <div class="subtitulo">Senha:</div>
+                        <input name="senha" placeholder="senha123" class="senha"></input>
+                        <button class="botao" name="concluido">Concluído</button>
+                    </form>
+                    <a href="../logar/registrar.html">
+                        <div class="logar">Não possue uma? Criar uma conta</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?php
+
+if (isset($_POST['usuario']) && !empty($_POST['usuario'])) {
+    $usuario = $_POST['usuario'];
+}
+
+if (isset($_POST['senha']) && !empty($_POST['senha'])) {
+    $senha = $_POST['senha'];
+}
+
+if (file_exists("../usuarios/{$usuario}.txt")) {
+    $abrir = file("../usuarios/{$usuario}.txt");
+}
+
+if ($senha == $abrir[1]) {
+    ?>
+        <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../logar/finalizado.css">
+        <title>Finalizado</title>
+    </head>
+    <body>
+
+        <div class="container">
+        <div class="texto">Parabéns seu login foi finalizado!</div>
+        <img class="imagem" src="../img/computador-icone.png">
+        </div>
+
+    </body>
+    </html>
+    <?php
+} else {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../logar/finalizado.css">
+        <title>Finalizado</title>
+    </head>
+    <body>
+
+        <div class="container">
+        <div class="texto-voltar">Oh não! seu login está errado, clique em voltar e tente novamente.</div>
+        <a class="link" href="./entrar.html">
+            <button class="voltar">Voltar</button>
+        </a>
+        <img class="imagem" src="../img/computador-icone.png">
+
+    </body>
+    </html>
+    <?php
+}

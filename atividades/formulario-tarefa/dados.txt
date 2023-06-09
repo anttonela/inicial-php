@@ -1,0 +1,7 @@
+
+Enviar tarefas para 'dados.txt' <br/>
+Colocar todas as atividades na tela <br/>
+Testar funcionamento <br/>testa\ndo 2 <br/>
+Tarefa um: finalizar analise php
+ <br/>
+teste <br/>

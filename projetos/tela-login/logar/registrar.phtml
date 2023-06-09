@@ -1,0 +1,90 @@
+<?php
+
+if (isset($_POST['usuario']) && !empty($_POST['usuario'])) {
+    $usuario = $_POST['usuario'];
+}
+
+if (isset($_POST['senha']) && strlen($_POST["senha"]) > 6) {
+    $senha = $_POST['senha'];
+}
+
+if (file_exists("../usuarios/{$usuario}.txt")) {
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./finalizado.css">
+        <title>Erro</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="texto-user">Oh não! seu user já está sendo utilizado! clique em voltar e tente novamente.</div>
+            <a class="link" href="./registrar.html">
+                <button class="voltar">Voltar</button>
+            </a>
+        </div>
+
+    </body>
+    </html>
+
+    <?=
+    die;
+}
+
+if ($senha && $usuario == true) {
+    file_put_contents("../usuarios/{$usuario}".".txt", $usuario . "\n" . $senha);
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./finalizado.css">
+        <title>Finalizado</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="texto">Parabéns seu login foi finalizado!</div>
+            <img class="imagem" src="../img/computador-icone.png">
+        </div>
+
+    </body>
+    </html>
+
+    <?php
+} else {
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./finalizado.css">
+        <title>Finalizado</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="texto-voltar">Oh não! seu login está incompleto, clique em voltar e tente novamente.</div>
+            <a class="link" href="../logar/registrar.html">
+                <button class="voltar">Voltar</button>
+            </a>
+            <img class="imagem" src="../img/computador-icone.png">
+        </div>
+
+    </body>
+    </html>
+
+    <?php
+}
+    ?>

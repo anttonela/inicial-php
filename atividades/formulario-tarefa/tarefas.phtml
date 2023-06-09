@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <title>Tarefas</title>
+    </head>
+
+    <body>  
+
+        <div>
+            <h1 id="titulo">Agenda de tarefas</h1>
+            <p id="subtitulo">Complete com as informações</p>
+        </div>
+
+        <form action="index.php" method="post">
+
+            <div class="inputs"><br>
+                <label for="detalhes"><strong>Detalhes sobre a tarefa </strong></label>
+                <textarea rows="6" style="width: 28em" id="detalhes" name="detalhes"></textarea>
+            </div>
+
+            <div class="tarefas"><b>Tarefas salvas:</b></div>
+
+            <button class="botao" type="submit">Concluído</button> 
+
+        </form>
+
+                <?php
+                    function mostrarTela()
+                    {
+                        if (isset($_POST['detalhes']) && !empty($_POST['detalhes'])) {
+                            $detalhes = $_POST['detalhes'];
+
+                            $arquivo = 'dados.txt';
+                            $fp = fopen($arquivo, "a+");
+                            $fpr = fopen($arquivo, "r");
+
+                            fwrite($fp, $detalhes . " <br/>\n");
+                        
+                            fclose($fp);
+                            while (!feof($fpr)) {
+                                $valor = fgets($fpr, 2000);
+                                echo $valor;
+                            }
+                            
+                            fclose($fpr);
+                        }
+                    }
+
+                    echo mostrarTela();
+                ?>
+</body>
+</html>

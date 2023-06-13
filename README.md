@@ -24,5 +24,5 @@ Na tela de registro é preenchido o nome de usuário e senha, o usuário não de
 ![tela-login](https://github.com/anttonela/projetos-php/assets/116034175/838afb50-42cf-4fcb-81ff-8f002f036f95)
 
 ##
-### Banco Funcion
+### Banco Funcionario
 Banco é um crud com conexão ao postgresql, tendo como adicionar, deletar, selecionar e alterar os dados dos funcionários.

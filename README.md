@@ -9,6 +9,7 @@ Primeiras atividades e projetos realizados em PHP
 ##
 ### Tela de Gráfico dos Funcionários
 
+
 Teve como objetivo treinar a manipulação de arquivos. Salva os dados preenchidos sobre determinado funcionário em um arquivo com seu nome, é póssivel alterar e deletar, mostra o conteúdo do arquivo no gráfico da tela principal.
 
 ![grafico-funcionarios](https://github.com/anttonela/projetos-php/assets/116034175/064b1d60-a6c1-436d-9e2e-73d07018e486)

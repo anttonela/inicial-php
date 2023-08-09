@@ -1,5 +1,4 @@
-# inicial-php
-Primeiras atividades e projetos realizados em PHP 
+### Primeiras atividades e projetos realizados em PHP 
 
 - 📚 **Atividades** - Possue sobre os primeiros passos do PHP, manipulação de arquivos, orientação objeto etc
 - 📈 **Projeto 1** - Gráfico Funcionários
